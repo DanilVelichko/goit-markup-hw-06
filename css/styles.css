@@ -848,7 +848,15 @@ icon-envelope icon-telephonelogo
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.title-modal {
+  padding: 40px 40px 30px 40px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
 /* .click {
   
    
