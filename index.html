@@ -317,54 +317,101 @@
           </div>
         </address>
       </div>
+      <!----------------------------Лінки на соцмережі--------------------------------->
       <div class="social-footer-container">
         <h3 class="title-footer">Приєднуйтесь</h3>
-        <div class="actions"></div>
-        <ul class="social-list-footer">
-          <li class="social-item-footer "><a href="#">
-              <svg class="button-logo">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg></a></li>
-          <li class="social-item-footer "><a href="#">
-              <svg class="button-logo">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg></a></li>
-          <li class="social-item-footer "><a href="#">
-              <svg class="button-logo">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg></a></li>
-          <li class="social-item-footer "><a href="#">
-              <svg class="button-logo">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg></a></li>
-        </ul>
+        <div class="actions">
+          <ul class="social-list-footer">
+            <li class="social-item-footer "><a href="#">
+                <svg class="button-logo">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg></a></li>
+            <li class="social-item-footer "><a href="#">
+                <svg class="button-logo">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg></a></li>
+            <li class="social-item-footer "><a href="#">
+                <svg class="button-logo">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg></a></li>
+            <li class="social-item-footer "><a href="#">
+                <svg class="button-logo">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!----------------------------Форма email підписки---------------------------------->
+      <div class="mail-footer-container">
+        <h3 class="title-footer">Підпишіться на розсилку</h3>
+        <div class="email-field">
+          <label for="mail"></label>
+          <input type="email" name="mail" id="mail" placeholder="E-mail" />
+          <button type="submit" class='button-subscr-design'>Підписатися<svg class="send-logo">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg></button>
+        </div>
       </div>
     </div>
   </footer>
+  <!----------------------------Модальне ввікно------------------------------------->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button type="button" class="modal-close-button" data-modal-close>
         <svg class="close-logo">
-          <use href="images/icons.svg#icon-close"></use>
-        </svg></button>
+          <use href="images/icons.svg#icon-vector-close"></use>
+        </svg>
+      </button>
+
       <p class="title-modal">Залиште свої дані, ми вам передзвонимо</p>
-      <form class="js-">
-        <label for="name">Ім'я</label>
-        <input type="text" name="name" id="name" />
+      <form class="form js-" autocomplete="off">
+        <div class="form-field">
+          <label class="form-label" for="name" autofocus>Ім'я</label>
+          <input class="form-input" type="text" name="name" id="name" />
+          <div class="modal-logo">
+            <svg class="name-logo">
+              <use href="images/icons.svg#icon-name"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="tel">Телефон</label>
+          <input class="form-input" type="tel" name="tel" id="tel" />
+          <div class="modal-telephone">
+            <svg class="telephone-logo">
+              <use href="images/icons.svg#icon-telephone"></use>
+            </svg>
+          </div>
+        </div>
 
-        <label for="tel">Телефон</label>
-        <input type="tel" name="tel" id="tel" />
+        <div class="form-field">
+          <label class="form-label" for="mail">Пошта</label>
+          <input class="form-input" type="email" name="mail" id="mail" />
+          <div class="modal-mail">
+            <svg class="mail-logo">
+              <use href="images/icons.svg#icon-mail"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="comment">Коментар</label>
+          <textarea class="input-area" type="text" name="comment" id="comment" rows="10" placeholder="Введіть текст">
+          </textarea>
+        </div>
+        <div class="form-checkbox">
+          <label class="policy-checkbox" for="policy">
+            <input class="checkbox" type="checkbox" name="policy" id="policy" />
+            <svg class="checkbox-logo">
+              <use href="images/icons.svg#icon-chekbox"></use>
+            </svg>
+            <svg class="approve-logo">
+              <use href="images/icons.svg#icon-icon-check"></use>
+            </svg>Погоджуюся з розсилкою та приймаю<a class="link-legal" href="#"> Умови договору</a>
+          </label>
+        </div>
 
-        <label for="mail">Пошта</label>
-        <input type="email" name="mail" id="mail" />
-
-        <label for="comment">Коментар</label>
-        <textarea type="text" name="comment" id="comment" rows="10"></textarea>
-        
-        <input type="checkbox" name="policy" id="policy"/>
-        <label for="policy">Погоджуюся з розсилкою та приймаю Умови договору</label>
-
-        <button type="submit">Відправити</button>
+        <button class="button-modal-submit" type="submit">Відправити</button>
       </form>
     </div>
   </div>

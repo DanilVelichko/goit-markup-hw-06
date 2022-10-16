@@ -438,7 +438,7 @@ button {
 }
 
 
-/* -------------------Стилізація Іконок */
+/* -------------------Стилізація Іконок--------------------------------- */
 
 .actions {
   display: block;
@@ -502,7 +502,7 @@ icon-envelope icon-telephonelogo
   padding: 0;
   border: none;
   gap: 30px;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .flex-clients-item:last-child {
@@ -527,13 +527,15 @@ icon-envelope icon-telephonelogo
 .thumb-client:hover .thumb-client-icon {
   fill: #2196F3;
 }
+
 .thumb-client:hover {
   border: 1px solid #2196F3;
   fill: #2196F3;
 }
+
 .thumb-client-icon {
   fill: #AFB1B8;
-  background:transparent;
+  background: transparent;
   width: 106px;
   height: 60px;
   transition-duration: 250ms;
@@ -668,7 +670,7 @@ icon-envelope icon-telephonelogo
 .about-item-text {
   opacity: 0;
   position: absolute;
-  outline: 3px solid rgb(133, 52, 122);
+  /* outline: 3px solid rgb(133, 52, 122); */
   top: 0;
   left: 0;
   height: 100%;
@@ -689,7 +691,7 @@ icon-envelope icon-telephonelogo
   opacity: 1;
 }
 
-/* -----------------------Футер----------------------- */
+/** -----------------------Футер----------------------- */
 .footer-container {
   display: flex;
 }
@@ -713,8 +715,13 @@ icon-envelope icon-telephonelogo
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address.link {
+  width: 231px;
 }
 
 .footer-nav .address {
@@ -795,6 +802,59 @@ icon-envelope icon-telephonelogo
   cursor: pointer;
 }
 
+/** --------------------------- Емейл підписка  --------------------------- */
+.mail-footer-container {
+  margin-left: 93px;
+}
+
+.email-field {
+  display: flex;
+  background-color: transparent;
+}
+
+.email-field input {
+  width: 358px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 0px 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+
+.button-subscr-design {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  padding: 10px 10px 10px 28px;
+  margin-left: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  background-color: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: left;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.send-logo {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: #FFFFFF;
+  background: transparent;
+}
+
 /** --------------------------- Модальне вікно --------------------------- */
 .backdrop {
   width: 100%;
@@ -820,14 +880,17 @@ icon-envelope icon-telephonelogo
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: block;
 }
 
 .close-logo {
-  width: 30px;
-  height: 30px;
-  background: none;
+  width: 11px;
+  height: 11px;
+
   border-color: #757575;
+  fill: #000000;
 }
+
 
 .modal-close-button {
   position: absolute;
@@ -838,6 +901,13 @@ icon-envelope icon-telephonelogo
   border-radius: 50%;
   right: 16px;
   top: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-button:hover .close-logo {
+  fill: #2196F3;
+  cursor: pointer;
+
 }
 
 .is-hidden {
@@ -848,8 +918,9 @@ icon-envelope icon-telephonelogo
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .title-modal {
-  padding: 40px 40px 30px 40px;
+  padding: 40px 40px 12px 40px;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -857,6 +928,227 @@ icon-envelope icon-telephonelogo
   letter-spacing: 0.03em;
   color: #212121;
 }
+
+.form {
+  margin-left: 40px;
+  text-align: left;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.form-field textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea {
+  padding-top: 12px;
+  padding-left: 18px;
+  border-radius: 4px;
+  resize: none;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 448px;
+  text-align: left;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label {
+  margin-bottom: 4px;
+}
+
+.form-field input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+}
+
+.form-field:hover input {
+  border: 1px solid var(--hover-color);
+  cursor: pointer;
+}
+
+.form-input:active {
+  fill: var(--focus-color);
+  border: 1px solid var(--focus-color);
+}
+
+.form-field:focus-within {
+  fill: var(--focus-color);
+}
+
+.form-field textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-field:hover textarea {
+  border: 1px solid var(--hover-color);
+  cursor: pointer;
+}
+
+.input-area {
+  height: 120px;
+}
+
+
+
+.form {
+  position: relative;
+  ;
+}
+
+.link-legal {
+  color: #2196F3;
+  border-bottom: 1px solid #2196F3;
+
+}
+
+.name-logo {
+  width: 12px;
+  height: 12px;
+}
+
+.modal-logo {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+}
+
+.telephone-logo {
+  width: 13px;
+  height: 13px;
+}
+
+.modal-telephone {
+  position: absolute;
+  left: 15px;
+  top: 100px;
+}
+
+.mail-logo {
+  width: 15px;
+  height: 12px;
+}
+
+.modal-mail {
+  position: absolute;
+  left: 15px;
+  top: 168px;
+
+}
+
+.form-field:hover {
+  fill: #188CE8;
+}
+
+.form-checkbox {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 13px;
+  margin-right: 51px;
+  align-items: center;
+
+  /* margin-bottom: 30px; */
+  /* padding: 20px 51px 30px 76px; */
+  /* align-items: center; */
+}
+
+.policy-checkbox {
+  padding-left: 7px;
+  display: flex;
+  width: 400px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  justify-content: space-between;
+  align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox {
+  /* position: absolute; */
+  /* appearance: none; */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.checkbox-logo {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  fill: #212121;
+  left: -13px;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.checkbox:checked+.checkbox-logo {
+  fill: #2196F3;
+  background: #2196F3;
+}
+
+.approve-logo {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  /* outline: 1px black solid;; */
+  fill: #fff;
+  left: -10px;
+  align-items: center;
+}
+
+.checkbox:checked+.approve-logo {
+  fill: #2196F3
+}
+
+.button-modal-submit {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: 124px;
+  margin-top: 30px;
+}
+
 /* .click {
   
    
