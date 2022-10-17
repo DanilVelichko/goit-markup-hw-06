@@ -27,6 +27,10 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  border: 1px solid var(--focus-color);
+}
+
 /* -----------------------видалення: маркери, підкреслення, посилання, відступів---------------- */
 a {
   text-decoration: none;
@@ -871,6 +875,7 @@ icon-envelope icon-telephonelogo
 .modal {
   width: 528px;
   min-height: 581px;
+  padding: 40px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -886,7 +891,6 @@ icon-envelope icon-telephonelogo
 .close-logo {
   width: 11px;
   height: 11px;
-
   border-color: #757575;
   fill: #000000;
 }
@@ -920,7 +924,8 @@ icon-envelope icon-telephonelogo
 }
 
 .title-modal {
-  padding: 40px 40px 12px 40px;
+  /* padding-top: 40px; */
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -930,7 +935,7 @@ icon-envelope icon-telephonelogo
 }
 
 .form {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   text-align: left;
   align-items: center;
   font-weight: 400;
@@ -986,6 +991,11 @@ icon-envelope icon-telephonelogo
   cursor: pointer;
 }
 
+.form-field:focus input {
+  border: 1px solid var(--hover-color);
+
+}
+
 .form-input:active {
   fill: var(--focus-color);
   border: 1px solid var(--focus-color);
@@ -1004,21 +1014,28 @@ icon-envelope icon-telephonelogo
   cursor: pointer;
 }
 
+.input-area:focus {
+  outline: none !important;
+  border-color: var(--focus-color);
+}
+
+.form-input:focus {
+  outline: none !important;
+  border-color: var(--focus-color);
+}
+
 .input-area {
   height: 120px;
 }
 
-
-
 .form {
   position: relative;
-  ;
 }
 
 .link-legal {
   color: #2196F3;
+  line-height: 1;
   border-bottom: 1px solid #2196F3;
-
 }
 
 .name-logo {
@@ -1052,24 +1069,18 @@ icon-envelope icon-telephonelogo
   position: absolute;
   left: 15px;
   top: 168px;
-
 }
 
 .form-field:hover {
   fill: #188CE8;
 }
-
+/* ------------------Чекбокс---------- */
 .form-checkbox {
   position: relative;
   display: flex;
   margin-top: 20px;
-  margin-left: 13px;
-  margin-right: 51px;
+  margin-left: 25px;
   align-items: center;
-
-  /* margin-bottom: 30px; */
-  /* padding: 20px 51px 30px 76px; */
-  /* align-items: center; */
 }
 
 .policy-checkbox {
@@ -1082,6 +1093,7 @@ icon-envelope icon-telephonelogo
   letter-spacing: 0.03em;
   color: #757575;
   justify-content: space-between;
+  /* justify-content: space-around; */
   align-items: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1090,6 +1102,7 @@ icon-envelope icon-telephonelogo
 .checkbox {
   /* position: absolute; */
   /* appearance: none; */
+  display: flex;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -1099,6 +1112,7 @@ icon-envelope icon-telephonelogo
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  /* align-items: center; */
 }
 
 
